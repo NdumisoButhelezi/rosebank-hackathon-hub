@@ -22,8 +22,10 @@ const HeroSection = () => {
         playsInline
         className="fixed inset-0 w-full h-full object-cover object-center z-[-1]"
         style={{ minHeight: '100vh', minWidth: '100vw' }}
+        onContextMenu={e => e.preventDefault()}
+        onPlay={e => { e.currentTarget.play().catch(() => {}); }}
       >
-        <source src="/Hailuo_Video_close-up%20shot%20of%20a%20black%20girl,_397034285584900105.mp4" type="video/mp4" />
+        <source src="/background.mp4" type="video/mp4" />
       </video>
       <div className="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center min-h-screen">
         <motion.h1 
