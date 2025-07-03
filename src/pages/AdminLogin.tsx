@@ -7,6 +7,7 @@ import { auth } from "@/lib/firebase";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import AdminSetup from "@/components/AdminSetup";
 
 interface LoginFormData {
   email: string;
@@ -17,6 +18,7 @@ const AdminLogin = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<LoginFormData>();
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+  const [showSetup, setShowSetup] = useState(false);
   const navigate = useNavigate();
 
   const onSubmit = async (data: LoginFormData) => {
@@ -29,11 +31,15 @@ const AdminLogin = () => {
       });
       navigate("/admin");
     } catch (error: any) {
-      toast({
-        title: "Login Failed",
-        description: error.message,
-        variant: "destructive"
-      });
+      if (error.code === 'auth/user-not-found') {
+        setShowSetup(true);
+      } else {
+        toast({
+          title: "Login Failed",
+          description: error.message,
+          variant: "destructive"
+        });
+      }
     } finally {
       setIsLoading(false);
     }
@@ -42,7 +48,10 @@ const AdminLogin = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-muted">
       <div className="max-w-md w-full mx-4">
-        <div className="bg-card p-8 rounded-lg border">
+        {showSetup ? (
+          <AdminSetup onSetupComplete={() => setShowSetup(false)} />
+        ) : (
+          <div className="bg-card p-8 rounded-lg border">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-foreground">Admin Login</h1>
             <p className="text-muted-foreground mt-2">
@@ -85,7 +94,19 @@ const AdminLogin = () => {
               {isLoading ? "Signing In..." : "Sign In"}
             </Button>
           </form>
+          
+          <div className="mt-4 text-center">
+            <Button 
+              onClick={() => setShowSetup(true)}
+              variant="ghost"
+              size="sm"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              Need to create admin account?
+            </Button>
+          </div>
         </div>
+        )}
       </div>
     </div>
   );

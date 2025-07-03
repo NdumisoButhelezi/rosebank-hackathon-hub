@@ -15,14 +15,17 @@ const HeroSection = () => {
     <section className="min-h-screen bg-charcoal text-charcoal-foreground flex items-center relative overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <iframe
-          src="https://hailuoai.video/share/ai-video/Z7x7em422r9G?source-scene=shared&source-media=shared_link"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover opacity-30"
-          style={{ border: 'none' }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-        <div className="absolute inset-0 bg-charcoal/60"></div>
+        >
+          <source src="/hackathon-video.mp4" type="video/mp4" />
+          {/* Fallback gradient if video not available */}
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-charcoal/80 via-charcoal/60 to-primary/20"></div>
       </div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
