@@ -1,9 +1,31 @@
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const scrollToRegistration = () => {
+    const registrationSection = document.getElementById('registration-form');
+    if (registrationSection) {
+      registrationSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
-    <section className="min-h-screen bg-charcoal text-charcoal-foreground flex items-center">
-      <div className="container mx-auto px-4 text-center">
+    <section className="min-h-screen bg-charcoal text-charcoal-foreground flex items-center relative overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <iframe
+          src="https://hailuoai.video/share/ai-video/Z7x7em422r9G?source-scene=shared&source-media=shared_link"
+          className="w-full h-full object-cover opacity-30"
+          style={{ border: 'none' }}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+        <div className="absolute inset-0 bg-charcoal/60"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 text-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Rosebank Women in ICT
           <br />
@@ -14,8 +36,9 @@ const HeroSection = () => {
           collaboration, and cutting-edge solutions.
         </p>
         <Button 
+          onClick={scrollToRegistration}
           size="lg" 
-          className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-4 rounded-full font-semibold"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105"
         >
           Register Now
         </Button>
