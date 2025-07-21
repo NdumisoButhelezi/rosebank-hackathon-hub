@@ -78,7 +78,7 @@ const TimelineSection = () => {
                   <p className="text-muted-foreground mb-4">
                     {event.description}
                   </p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {event.points.map((point, pointIndex) => (
                       <li key={pointIndex} className="text-sm text-muted-foreground flex items-center">
                         <span className="inline-block w-2 h-2 bg-primary rounded-full mr-3"></span>
