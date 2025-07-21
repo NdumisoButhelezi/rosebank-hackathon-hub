@@ -72,7 +72,7 @@ const TimelineSection = () => {
               <div className="absolute left-2 md:left-1/2 md:transform md:-translate-x-1/2 top-6 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg z-10"></div>
               
               {/* Content */}
-              <div className={`flex-1 ml-12 md:ml-0 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
+              <div className="flex-1 ml-12 md:ml-0 md:pl-8">
                 <div className="bg-card p-6 rounded-lg shadow-sm border">
                   <h3 className="text-xl font-semibold text-primary mb-2">
                     {event.title}
@@ -83,10 +83,10 @@ const TimelineSection = () => {
                   <p className="text-muted-foreground mb-4">
                     {event.description}
                   </p>
-                  <ul className={`space-y-2 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
+                  <ul className="space-y-2">
                     {event.points.map((point, pointIndex) => (
                       <li key={pointIndex} className="text-sm text-muted-foreground flex items-center">
-                        <span className={`inline-block w-2 h-2 bg-primary rounded-full mr-3 ${index % 2 === 0 ? 'md:order-2 md:ml-3 md:mr-0' : ''}`}></span>
+                        <span className="inline-block w-2 h-2 bg-primary rounded-full mr-3"></span>
                         {point}
                       </li>
                     ))}
