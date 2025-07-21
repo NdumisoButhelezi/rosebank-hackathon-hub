@@ -70,7 +70,7 @@ const AdminDashboard = () => {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "hackathon-participants.csv";
+    a.download = "bootcamp-participants.csv";
     a.click();
     window.URL.revokeObjectURL(url);
   };

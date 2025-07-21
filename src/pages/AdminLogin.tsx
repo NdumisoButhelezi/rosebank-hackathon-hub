@@ -55,7 +55,7 @@ const AdminLogin = () => {
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-foreground">Admin Login</h1>
             <p className="text-muted-foreground mt-2">
-              Access the hackathon admin dashboard
+              Access the boot camp admin dashboard
             </p>
           </div>
 

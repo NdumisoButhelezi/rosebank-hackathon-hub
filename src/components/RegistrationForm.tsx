@@ -43,7 +43,7 @@ const RegistrationForm = () => {
 
       toast({
         title: "Registration Successful!",
-        description: "Welcome to the Rosebank Women in ICT Hackathon 2025",
+        description: "Welcome to the Rosebank Women in ICT Boot Camp 2025",
       });
 
       reset();
@@ -63,7 +63,7 @@ const RegistrationForm = () => {
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 text-foreground">
-            Register for the Hackathon
+            Register for the Boot Camp
           </h2>
           <p className="text-lg text-muted-foreground">
             Join us for an incredible 48-hour innovation challenge
@@ -150,7 +150,7 @@ const RegistrationForm = () => {
             disabled={isLoading}
             className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
           >
-            {isLoading ? "Registering..." : "Register for Hackathon"}
+            {isLoading ? "Registering..." : "Register for Boot Camp"}
           </Button>
         </form>
       </div>

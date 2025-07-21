@@ -46,7 +46,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
             className="text-primary drop-shadow-md"
-          >Hackathon 2025</motion.span>
+          >Boot Camp 2025</motion.span>
         </motion.h1>
         <motion.p 
           className="text-xl md:text-2xl mb-8 font-semibold max-w-3xl mx-auto bg-gradient-to-r from-red-400 via-pink-300 to-yellow-200 bg-clip-text text-transparent animate-pulse drop-shadow-lg"

@@ -12,7 +12,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold mb-8 text-foreground">
-            About the Hackathon
+            About the Boot Camp
           </h2>
           <motion.p 
             className="text-lg mb-6 leading-relaxed font-semibold text-red-600"
@@ -24,7 +24,7 @@ const AboutSection = () => {
             Empowering the next generation of women technologists through innovation, collaboration, and cutting-edge solutions.
           </motion.p>
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-            The Rosebank Women in ICT Hackathon is a 48-hour innovation challenge 
+            The Rosebank Women in ICT Boot Camp is a 48-hour innovation challenge 
             designed to showcase the incredible talent of women in technology. 
             Participants will work in teams to develop solutions addressing real-world 
             challenges while fostering collaboration and creativity.
