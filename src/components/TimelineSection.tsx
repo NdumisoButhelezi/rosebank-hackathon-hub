@@ -65,19 +65,14 @@ const TimelineSection = () => {
               transition={{ delay: index * 0.2, duration: 0.7, ease: 'easeOut' }}
               viewport={{ once: true }}
             >
-              {/* Timeline line */}
-              <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-8 bottom-0 w-0.5 bg-primary/30 hidden md:block last:hidden"></div>
-              
-              {/* Timeline dot */}
-              <div className="absolute left-2 md:left-1/2 md:transform md:-translate-x-1/2 top-6 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg z-10"></div>
-              
+             
               {/* Content */}
               <div className="flex-1 ml-12 md:ml-0 md:pl-8">
                 <div className="bg-card p-6 rounded-lg shadow-sm border">
                   <h3 className="text-xl font-semibold text-primary mb-2">
                     {event.title}
                   </h3>
-                  <p className="text-sm font-medium text-red-600 mb-4">
+                  <p className="text-sm font-medium text-muted-foreground mb-4">
                     {event.date}
                   </p>
                   <p className="text-muted-foreground mb-4">
