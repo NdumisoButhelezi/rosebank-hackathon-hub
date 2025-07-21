@@ -21,13 +21,11 @@ const AboutSection = () => {
             transition={{ delay: 0.2, duration: 0.7, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            Empowering the next generation of women technologists through innovation, collaboration, and cutting-edge solutions.
+            Women are still significantly underrepresented in tech, with only 13% of ICT graduates in South Africa being women (Stats SA, 2022).
           </motion.p>
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-            The Rosebank Women in ICT Boot Camp is a 48-hour innovation challenge 
-            designed to showcase the incredible talent of women in technology. 
-            Participants will work in teams to develop solutions addressing real-world 
-            challenges while fostering collaboration and creativity.
+            This bootcamp is designed not only to upskill participants but to inspire them to become creators of inclusive digital solutions. 
+            Your club or society is invited to nominate a team of five (5) female students to take part in this structured development programme.
           </p>
           <motion.div 
             className="grid md:grid-cols-3 gap-8"

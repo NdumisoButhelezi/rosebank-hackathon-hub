@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ChallengesSection from "@/components/ChallengesSection";
+import TimelineSection from "@/components/TimelineSection";
 import RegistrationForm from "@/components/RegistrationForm";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -24,6 +25,7 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <ChallengesSection />
+        <TimelineSection />
         <RegistrationForm />
       </main>
     </>
