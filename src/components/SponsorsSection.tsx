@@ -25,7 +25,7 @@ const SponsorsSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold mb-8 text-gray-900">
-            Our Sponsors
+            Our Partners 
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             We are grateful for the support of our sponsors who make this hackathon possible
@@ -59,3 +59,4 @@ const SponsorsSection = () => {
 };
 
 export default SponsorsSection;
+
