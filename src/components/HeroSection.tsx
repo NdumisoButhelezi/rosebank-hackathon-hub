@@ -39,7 +39,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             className="block"
-          >Rosebank Women in ICT</motion.span>
+          >Rosebank College Women in ICT</motion.span>
           <br />
           <motion.span
             initial={{ opacity: 0, x: 30 }}
