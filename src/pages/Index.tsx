@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ChallengesSection from "@/components/ChallengesSection";
 import TimelineSection from "@/components/TimelineSection";
+import SponsorsSection from "@/components/SponsorsSection";
 import RegistrationForm from "@/components/RegistrationForm";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -26,6 +27,7 @@ const Index = () => {
         <AboutSection />
         <ChallengesSection />
         <TimelineSection />
+        <SponsorsSection />
         <RegistrationForm />
       </main>
     </>
